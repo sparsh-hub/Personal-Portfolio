@@ -5,7 +5,7 @@ import About from './Components/About'
 
 const App = () => {
   return (
-    <main className='h-screen bg-[#023020]'>
+    <main className='min-h-screen bg-[#023020] m-0 p-0'>
       <Navbar />
       <Hero />
       <About />
