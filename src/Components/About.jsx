@@ -1,16 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import myPic from "./my-pic.jpg";
+
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 const About = () => {
   const [Image, setImage] = useState(myPic);
-
+  const container = useRef();
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".aboutme",
+        { opacity: 0, y: 200 },
+        {
+          opacity: 1,
+          duration: 5,
+          y: 0,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: ".aboutme p",
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+            invalidateOnRefresh:true,
+          },
+        }
+      );
+    },
+    { scope: container }
+  );
   return (
-    <section id="about" className="text-[#F2F0EF] pb-20">
-      <p className="font-bold font-mono text-5xl mt-30 ml-40">
-        About Me{" "}
+    <section id="about" ref={container} className="text-[#F2F0EF] pb-20">
+      <p className="aboutme font-bold font-mono text-5xl mt-30 ml-40">
+        {"</> "}About Me{" "}
         <span className="inline-block w-100 bg-[#F2F0EF] mb-3 opacity-35 h-0.5 ml-4"></span>
       </p>
-      <div className="flex flex-row justify-around gap-20">
+      <div className="aboutme flex flex-row justify-around gap-20">
         <div className="font-bold font-mono mt-15 ml-40 text-lg leading-8 max-w-220">
           <p>
             I am a highly driven second-year Computer Science student at{" "}
@@ -50,8 +77,11 @@ const About = () => {
           </p>
         </div>
         <div className="mr-50 ">
-          <img src={myPic} className="w-200 mt-10 h-100 border-0 rounded-lg" />
-          <button className="mt-10 ml-25 border p-5 hover:bg-[#000000]  hover:translate-y-1 hover:scale-110 hover:opacity-70 border-[#1AFF00] text-[#1AFF00] hover:transition hover:duration-1000 hover:ease-in-out ">
+          <img
+            src={myPic}
+            className="w-200 mt-10 h-100 border-0 rounded-[30px] hover:-translate-y-3 "
+          />
+          <button className="mt-10 ml-25 border p-5 hover:bg-[#000000]  hover:translate-y-1 hover:scale-110 hover:opacity-70 border-[#1AFF00] bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent hover:transition hover:duration-1000 hover:ease-in-out ">
             Click For More Pics?
           </button>
         </div>
