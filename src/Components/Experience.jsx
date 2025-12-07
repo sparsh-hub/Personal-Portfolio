@@ -21,7 +21,7 @@ const Experience = () => {
         scrollTrigger: {
           trigger: ".cards-wrapper",
           start: "top top",
-          end: "+=1500",
+          end: "+=1700",
           pin: true,
           scrub: 1,
           pinSpacing:false,
