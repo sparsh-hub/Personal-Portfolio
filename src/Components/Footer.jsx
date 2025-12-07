@@ -11,12 +11,15 @@ const Footer = () => {
   useGSAP(
     () => {
       const split = SplitText.create(".footer", {
-        type: "lines",
+        type: "words",
       });
-      gsap.from(split.lines, {
-        y: 200,
+      gsap.from(split.words, {
+        x: 200,
         opacity: 0,
-        stagger: 0.1,
+        stagger: {
+            amount: 0.5,
+            from: "random",
+        },
         duration: 2,
         ease: "sine.out",
         scrollTrigger: {
