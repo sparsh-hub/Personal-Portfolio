@@ -44,7 +44,7 @@ const PhotoGallery = () => {
       scrollTrigger:{
         trigger: containerRef.current,
         start: "top top",
-        end: "+=2500",
+        end: "+=1500",
         scrub:2,
         pin:true,
         anticipatePin:1,
