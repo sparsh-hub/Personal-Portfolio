@@ -11,52 +11,51 @@
     },
     {
       id:2,
-      title: "Freelance Developer",
+      title: "Alcohol Detector",
       icon: '/icon3.png',
       items: [
-        "Created custom websites for local businesses",
-        "Implemented GSAP animations for interactive experiences",
-        "Maintained and updated existing web projects",
+        "Designed and prototyped an embedded alcohol detection system using an Arduino Uno and MQ-3 sensor, bridging hardware components with custom logic.",
+        "Developed C++ firmware within the Arduino IDE to process analog sensor inputs, implementing real-time data monitoring and threshold-based decision logic.",
+        "Calibrated sensor sensitivity to accurately trigger distinct alert states (e.g., visual or auditory indicators), ensuring reliable performance in varying environmental conditions",
       ],
     },
      {
       id: 3,
-      title: "WEB DEVELOPER AT CoderOne",
+      title: "E-Commerce With SQL database",
       icon: '/icon2.png',
       items: [
-        "Built responsive web applications using React and Tailwind CSS",
-        "Collaborated with design team to implement UI/UX improvements",
-        "Optimized website performance and loading times",
+        "Architected and developed a full-stack e-commerce application, integrating a responsive frontend with a robust SQL database to manage dynamic product catalogs and user data.",
+        "Implemented core business logic including persistent shopping cart management and a multi-step checkout flow, ensuring data consistency and transaction integrity.",
+       "Built a secure Admin Dashboard enabling sellers to perform CRUD operations on inventory, real-time order tracking, and sales visualization",
       ],
-    },
-     
+    },   
 ]
 
 
 const gallery = [
   {
     id: 1,
-    link: '/icon1.jpg'
+    link: '/seattle.jpg'
   },
   {
     id: 2,
-    link: '/icon2.png'
+    link: '/santorini.jpg'
   },
   {
     id: 3,
-    link: '/icon3.png'
+    link: '/f1.jpg'
   },
   {
     id: 4,
-    link: '/myPic.jpg'
+    link: '/aurora.jpg'
   },
   {
     id: 4,
-    link: '/motivation1.jpg'
+    link: '/motivation.jpg'
   },
   {
     id: 4,
-    link: '/motivation2.jpg'
+    link: '/me.jpeg'
   },
   
 ]

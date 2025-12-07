@@ -19,27 +19,25 @@ const Navbar = () => {
             <a href="/" className="hover:text-[#1AFF00]">
               Sparsh Agarwal
             </a>
-            <a href="#home" className="aboutLink hover:text-[#1AFF00]">
+            <a href="#home" className="aboutLink hover:bg-[#1AFF00]/45 hover:p-3 rounded-2xl">
               Home
             </a>
-            <a href="#about" className="hover:text-[#1AFF00] scroll-smooth">
+            <a href="#about" className="hover:bg-[#1AFF00]/45 hover:p-3 rounded-2xl scroll-smooth">
               About
             </a>
-            <a href="#experience" className="hover:text-[#1AFF00]">
-              Experience
+            <a href="#projects" className="hover:bg-[#1AFF00]/45 hover:p-3 rounded-2xl">
+              Projects
             </a>
-            <a href="#gallery" className="hover:text-[#1AFF00]">
-              Gallery
-            </a>
+            
           </ul>
           <ul className="flex flex-row text-[#D3D3D3] p-3 m-2 gap-8 ">
-            <a href="" className="hover:animate-bounce hover:text-[#1AFF00]">
+            <a href="https://github.com/sparsh-hub" className="hover:animate-bounce hover:text-[#1AFF00]">
               <FaGithub size="20px" />
             </a>
-            <a href="" className="hover:animate-bounce hover:text-[#1AFF00]">
+            <a href="mailto:sparshag2803@gmail.com" className="hover:animate-bounce hover:text-[#1AFF00]">
               <IoMdMailOpen size="20px" />
             </a>
-            <a href="" className="hover:animate-bounce hover:text-[#1AFF00]">
+            <a href="https://www.linkedin.com/in/sparsh-agarwal-657455289/" className="hover:animate-bounce hover:text-[#1AFF00]">
               <AiFillLinkedin size="20px" />
             </a>
             <a href="" className="hover:animate-bounce hover:text-[#1AFF00]">

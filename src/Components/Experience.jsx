@@ -14,11 +14,14 @@ const Experience = () => {
 
   useGSAP(
     () => {
+      const cards = gsap.utils.toArray(".card");
+
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".cards-wrapper",
           start: "top top",
-          end: "bottom bottom",
+          end: "+=1500",
           pin: true,
           scrub: 1,
           pinSpacing:false,
@@ -26,8 +29,8 @@ const Experience = () => {
       });
 
       tl.to(".card", {
-        height: 150,
-        stagger: 0.5,
+        height: 130,
+        stagger: 2,
         ease: "linear",
       });
     },
@@ -35,11 +38,11 @@ const Experience = () => {
   );
 
   return (
-    <section id="experience" ref={container}>
-      <div className="cards-wrapper  p-16 overflow-hidden">
+    <section id="projects" ref={container}>
+      <div className="cards-wrapper p-16 overflow-hidden">
         <div>
           <p className="experience font-bold font-mono text-5xl text-[#D3D3D3] mt-30 ml-20">
-            {"</> "}Experience{" "}
+            {"</> "}Projects{" "}
             <span className="inline-block w-100 bg-[#F2F0EF] mb-3 opacity-35 h-0.5 ml-4"></span>
           </p>
         </div>
@@ -47,9 +50,9 @@ const Experience = () => {
           return (
             <div
               key={index}
-              className="card p-6  overflow-hidden"
+              className="card p-6 overflow-hidden"
             >
-              <div className="flex gap-4 items-center ml-10 h-32">
+              <div className="flex gap-4 items-center ml-10 h-30">
                 <h1 className="text-xl -translate-y-4 opacity-80 font-mono font-bold text-[#D3D3D3]">
                   {card.id}
                 </h1>

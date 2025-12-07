@@ -37,20 +37,17 @@ const About = () => {
         <div className="aboutme flex flex-row justify-around gap-20">
           <div className="font-bold font-mono mt-15 ml-40 text-lg leading-8 max-w-220">
             <p>
-              I am a highly driven second-year Computer Science student at{" "}
+              I am a CS student at{" "}
               <span className="text-[#1AFF00] font-extrabold text-xl">
                 Panjab University, Chandigarh
               </span>
-              , leveraging a foundation in ECE and robotics. My strong
-              interdisciplinary focus spans core CS domains, Finance, and
-              Psychology. Demonstrating high personal discipline and commitment,
-              I consistently dedicate{" "}
+              , who creates problems for himself by having too many interests. With a foundation in ECE and Robotics, and a deep curiosity for Finance and Psychology, I realized I needed serious structure to keep up with my own ambitions. That led to a{" "}
               <span className="text-[#1AFF00] font-extrabold text-xl">
-                12 hours
+                12 hour
               </span>{" "}
-              daily to academics while managing extracurriculars like daily fitness or debating or the multiple interests i have. One thing I do wanna say is creating these many interests made me learn about how important discipline is in life to grow and hence i try to be as disciplined as possible.
+              daily grind of study, fitness, and other extracurriculars. I’ve found that high discipline is the only way to turn 'having many interests' into 'having many skills.
               <br />
-              Quoting Marcus Aurelius
+              <i>'The art of living is more like wrestling than dancing.'</i> — Marcus Aurelius (I take the wrestling part literally).
               <i></i>
             </p>
             <div className="flex flex-row gap-15">
@@ -67,7 +64,7 @@ const About = () => {
                 <li className="list-disc marker:text-[#1AFF00] mb-2">AWS</li>
                 <li className="list-disc marker:text-[#1AFF00] mb-2">SQL</li>
                 <li className="list-disc marker:text-[#1AFF00] mb-2">
-                  MongoDB
+                  Git/Github
                 </li>
               </ul>
             </div>
@@ -80,11 +77,9 @@ const About = () => {
           <div className="mr-30 ">
             <img
               src='/myPic.jpg'
-              className="w-100 mt-10 h-100 border-0 rounded-[30px] hover:-translate-y-3 "
+              className="w-100 mt-30 h-100 border-0 rounded-[30px] hover:-translate-y-3 "
             />
-            <button className="mt-10 ml-25 border p-5 hover:bg-[#000000]  hover:translate-y-1 hover:scale-110 hover:opacity-70 border-[#1AFF00] bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent hover:transition hover:duration-1000 hover:ease-in-out ">
-              Click For More Pics?
-            </button>
+            
           </div>
         </div>
       </div>
@@ -93,3 +88,8 @@ const About = () => {
 };
 
 export default About;
+
+
+// I am a CS student at Panjab University who creates problems for himself by having too many interests. With a foundation in ECE and Robotics, and a deep curiosity for Finance and Psychology, I realized I needed serious structure to keep up with my own ambitions.
+
+// That led to a 12-hour daily grind of study, fitness, and debating. I’ve found that high discipline is the only way to turn 'having many interests' into 'having many skills.'

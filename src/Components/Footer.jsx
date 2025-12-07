@@ -27,7 +27,7 @@ const Footer = () => {
     { scope: container }
   );
   return (
-    <section ref={container} className="text-[#D3D3D3]">
+    <section id="footer" ref={container} className="text-[#D3D3D3]">
       <div className="footer">
         <div className="flex flex-row justify-center gap-30">
           <h1 className="font-mono font-bold text-3xl mr-50 p-20">
