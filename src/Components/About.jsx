@@ -90,6 +90,3 @@ const About = () => {
 export default About;
 
 
-// I am a CS student at Panjab University who creates problems for himself by having too many interests. With a foundation in ECE and Robotics, and a deep curiosity for Finance and Psychology, I realized I needed serious structure to keep up with my own ambitions.
-
-// That led to a 12-hour daily grind of study, fitness, and debating. I’ve found that high discipline is the only way to turn 'having many interests' into 'having many skills.'

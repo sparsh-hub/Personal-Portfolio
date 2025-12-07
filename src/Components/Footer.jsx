@@ -38,25 +38,25 @@ const Footer = () => {
           </h1>
           <div className="grid grid-rows-4 mr-50">
             <a
-              href=""
+              href="https://www.instagram.com/sparsh_.agarwal"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
               Instagram
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/in/sparsh-agarwal-657455289/"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
               Linkedin
             </a>
             <a
-              href=""
+              href="https://in.pinterest.com/sparsh_hh/"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
               Pinterest
             </a>
             <a
-              href=""
+              href="mailto:sparshag2803@gmail.com"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
               E-Mail
@@ -64,25 +64,25 @@ const Footer = () => {
           </div>
           <div className="grid grid-rows-4 mr-50 ">
             <a
-              href=""
+              href="#home"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
               HOME
             </a>
             <a
-              href=""
+              href="#about"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
               ABOUT
             </a>
             <a
-              href=""
+              href="#project"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
-              EXPERIENCE
+              Projects
             </a>
             <a
-              href=""
+              href="#gallery"
               className="text-xs p-5 hover:underline hover:text-[#1AFF00]"
             >
               GALLERY

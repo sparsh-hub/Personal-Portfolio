@@ -4,7 +4,7 @@ import { IoMdMailOpen } from "react-icons/io";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaSquarePinterest } from "react-icons/fa6";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollSmoother);
@@ -40,7 +40,7 @@ const Navbar = () => {
             <a href="https://www.linkedin.com/in/sparsh-agarwal-657455289/" className="hover:animate-bounce hover:text-[#1AFF00]">
               <AiFillLinkedin size="20px" />
             </a>
-            <a href="" className="hover:animate-bounce hover:text-[#1AFF00]">
+            <a href="https://in.pinterest.com/sparsh_hh/" className="hover:animate-bounce hover:text-[#1AFF00]">
               <FaSquarePinterest size="20px" />
             </a>
           </ul>

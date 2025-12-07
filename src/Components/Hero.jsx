@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { motion } from "motion/react";
 import Cursor from "./Cursor";
 
 gsap.registerPlugin(useGSAP);
@@ -29,12 +28,12 @@ const Hero = () => {
         })
       
         gsap.from(split.chars, {
-        //   x: 100,
+        
           opacity:0,
           autoAlpha: 0,
           stagger:0.1,
           
-          duration:2, // Changed from 0.5 to 0.05
+          duration:2, 
           ease: "sine.out",
         });
      
@@ -78,4 +77,3 @@ export default Hero;
 
 
 
-// bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent
