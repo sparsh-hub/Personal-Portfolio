@@ -1,25 +1,80 @@
-import React from 'react'
+import React, { useRef } from "react";
+import { experienceData } from "../Store";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, SplitText } from "gsap/all";
+import PhotoGallery from "./PhotoGallery";
 
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
 
 const Experience = () => {
-    
+  const container = useRef();
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".cards-wrapper",
+          start: "top top",
+          end: "bottom bottom",
+          pin: true,
+          scrub: 1,
+          pinSpacing:false,
+        },
+      });
+
+      tl.to(".card", {
+        height: 150,
+        stagger: 0.5,
+        ease: "linear",
+      });
+    },
+    { scope: container }
+  );
 
   return (
-    <section id='experience' className="text-[#F2F0EF] pb-20">
-      <p className="font-bold font-mono text-5xl mt-30 ml-40">
-        {"</> "}Experience{" "}
-        <span className="inline-block w-100 bg-[#F2F0EF] mb-3 opacity-35 h-0.5 ml-4"></span>
-      </p>
-      <div >
-        <p className='ml-40 mt-15 font-mono font-bold text-xl max-w-300 leading-8'>
-            Okay so Experience hmmmmmm, honestly second year so any internship/tech related experience is pretty low will be trying for internships this year and update....for now, this will be all i think, but i'm learning gsap also, so more interactive sites on the wayy
-        </p>
-        <div className='flex flex-row justify-around'>
-
+    <section id="experience" ref={container}>
+      <div className="cards-wrapper  p-16 border-b border-white/25 overflow-hidden">
+        <div>
+          <p className="experience font-bold font-mono text-5xl text-[#D3D3D3] mt-30 ml-20">
+            {"</> "}Experience{" "}
+            <span className="inline-block w-100 bg-[#F2F0EF] mb-3 opacity-35 h-0.5 ml-4"></span>
+          </p>
         </div>
+        {experienceData.map((card, index) => {
+          return (
+            <div
+              key={index}
+              className="card p-6 border-b border-white/25 overflow-hidden"
+            >
+              <div className="flex gap-4 items-center ml-10 h-32">
+                <h1 className="text-xl -translate-y-4 opacity-80 font-mono font-bold text-[#D3D3D3]">
+                  {card.id}
+                </h1>
+                <h1 className="text-3xl opacity-80 font-mono font-bold text-[#1AFF00]">
+                  {card.title}
+                </h1>
+              </div>
+
+              <ul className="text-[#D3D3D3] mb-10">
+                {card.items.map((content, idx) => (
+                  <li
+                    className="list-disc marker:text-[#1AFF00] ml-15 mb-2  text-[#D3D3D3] font-bold font-mono text-lg"
+                    key={idx}
+                  >
+                    {content}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+        
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

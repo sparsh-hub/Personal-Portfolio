@@ -4,6 +4,8 @@ import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { motion } from "motion/react";
+import Cursor from "./Cursor";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(SplitText);
@@ -16,7 +18,15 @@ const Hero = () => {
       const split = SplitText.create(".intro", {
         type: "chars",
       });
-    
+
+        gsap.timeline({
+          scrollTrigger:{
+            trigger: "#hero",
+            start: 'top top',
+            end: 'bottom top',
+            scrub:true,
+          }
+        })
       
         gsap.from(split.chars, {
         //   x: 100,
@@ -32,7 +42,8 @@ const Hero = () => {
     { scope: container }
   );
   return (
-    <section id="home" ref={container} className="text-[#F2F0EF] ">
+    <section id="home" ref={container} className="text-[#D3D3D3] ">
+      <Cursor />
       <h1 className="intro font-mono font-bold pt-60 text-5xl text-center">
         Hi{" "}
         <span className="name text-[#1AFF00]">

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import myPic from "./my-pic.jpg";
+
 import { SplitText } from "gsap/all";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const About = () => {
-  const [Image, setImage] = useState(myPic);
+  
   const container = useRef();
   useGSAP(
     () => {
@@ -28,11 +28,11 @@ const About = () => {
     { scope: container }
   );
   return (
-    <section id="about" ref={container} className="text-[#F2F0EF] pb-20">
+    <section id="about" ref={container} className="text-[#D3D3D3] pb-20">
       <div className="about">
         <p className="aboutme font-bold font-mono text-5xl mt-40 ml-40">
           {"</> "}About Me{" "}
-          <span className="inline-block w-100 bg-[#F2F0EF] mb-3 opacity-35 h-0.5 ml-4"></span>
+          <span className="inline-block w-100 bg-[#D3D3D3] mb-3 opacity-35 h-0.5 ml-4"></span>
         </p>
         <div className="aboutme flex flex-row justify-around gap-20">
           <div className="font-bold font-mono mt-15 ml-40 text-lg leading-8 max-w-220">
@@ -73,14 +73,13 @@ const About = () => {
             <p className="mt-7">
               On a genuine note, I love learning a lot and i try to push myself
               to learn about probably everything new i get and can spend my time
-              on, this site is my first project on react/js btw and i learned
-              react like yesterday and js 2 days back btw (subtle flex yes)
+              on, 
             </p>
           </div>
-          <div className="mr-50 ">
+          <div className="mr-30 ">
             <img
-              src={myPic}
-              className="w-200 mt-10 h-100 border-0 rounded-[30px] hover:-translate-y-3 "
+              src='/myPic.jpg'
+              className="w-100 mt-10 h-100 border-0 rounded-[30px] hover:-translate-y-3 "
             />
             <button className="mt-10 ml-25 border p-5 hover:bg-[#000000]  hover:translate-y-1 hover:scale-110 hover:opacity-70 border-[#1AFF00] bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent hover:transition hover:duration-1000 hover:ease-in-out ">
               Click For More Pics?
