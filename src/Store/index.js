@@ -25,7 +25,7 @@
       icon: '/icon2.png',
       items: [
         "Architected and developed a full-stack e-commerce application, integrating a responsive frontend with a robust SQL database to manage dynamic product catalogs and user data.",
-        "Implemented core business logic including persistent shopping cart management and a multi-step checkout flow, ensuring data consistency and transaction integrity.",
+        "Implemented core business logic including cart management and checkout, ensuring data integrity.",
        "Built a secure Admin Dashboard enabling sellers to perform CRUD operations on inventory, real-time order tracking, and sales visualization",
       ],
     },   
