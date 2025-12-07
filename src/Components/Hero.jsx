@@ -1,39 +1,47 @@
 import React from "react";
 import { FaMailBulk } from "react-icons/fa";
 import gsap from "gsap";
+import { SplitText } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(SplitText);
 
 const Hero = () => {
-    const container = useRef();
+  const container = useRef();
+
   useGSAP(
     () => {
-      gsap.fromTo(
-        ".hero",
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          duration: 5,
-          y: 0,
-          ease: "power1.out",
-        }
-      );
+      const split = SplitText.create(".intro", {
+        type: "chars",
+      });
+    
+      
+        gsap.from(split.chars, {
+        //   x: 100,
+          opacity:0,
+          autoAlpha: 0,
+          stagger:0.1,
+          
+          duration:2, // Changed from 0.5 to 0.05
+          ease: "sine.out",
+        });
+     
     },
     { scope: container }
   );
   return (
     <section id="home" ref={container} className="text-[#F2F0EF] ">
+      <h1 className="intro font-mono font-bold pt-60 text-5xl text-center">
+        Hi{" "}
+        <span className="name text-[#1AFF00]">
+          Sparsh
+        </span>{" "}
+        here.
+        <span className="text-[#1AFF00] animate-ping">|</span>
+      </h1>
       <div className="hero">
-        <h1 className="font-mono font-bold pt-60 text-5xl text-center">
-          Hi{" "}
-          <span className="bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent">
-            Sparsh
-          </span>{" "}
-          here.
-          <span className="text-[#1AFF00] animate-ping">|</span>
-        </h1>
         <h2 className="hero font-mono font-bold mt-5 mr-10 text-3xl text-center">
           Currently On Development Arc
         </h2>
@@ -45,7 +53,7 @@ const Hero = () => {
         </p>
         <a
           href="mailto:sparshag2803@gmail.com"
-          className="flex flex-row justify-center gap-4 mt-20 text-lg font-bold border ml-190 mr-190 p-8 border-[#1AFF00] rounded-lg hover:bg-[#023020] hover:opacity-70 hover:animate-bounce bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent"
+          className="flex flex-row justify-center gap-4 mt-20 text-lg font-bold border ml-190 mr-190 p-8 border-[#1AFF00] rounded-lg hover:bg-[#023020] hover:opacity-10 hover:animate-pulse bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent"
         >
           <FaMailBulk size="30px" className="text-[#1AFF00]" />
           Say Hi
@@ -56,3 +64,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+// bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent

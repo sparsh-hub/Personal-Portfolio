@@ -3,8 +3,10 @@ import { FaGithub } from "react-icons/fa";
 import { IoMdMailOpen } from "react-icons/io";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaSquarePinterest } from "react-icons/fa6";
+import gsap from "gsap";
 
 const Navbar = () => {
+    
   return (
     <header>
       <nav className="flex flex-row justify-around bg-[#023020] top-0 fixed w-full z-100">
