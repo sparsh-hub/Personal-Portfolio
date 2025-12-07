@@ -64,7 +64,7 @@ const Hero = () => {
         </p>
         <a
           href="mailto:sparshag2803@gmail.com"
-          className="flex flex-row justify-center items-center mr-140 ml-140 gap-4 mt-20 text-lg font-bold border  p-8 border-[#1AFF00] rounded-lg hover:bg-[#023020] hover:opacity-10 hover:animate-pulse bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent"
+          className="flex flex-row justify-center items-center mr-155 ml-155 gap-4 mt-20 text-lg font-bold border  p-8 border-[#1AFF00] rounded-lg hover:bg-[#023020] hover:opacity-10 hover:animate-pulse bg-gradient-to-b from-[#023020] to-[#1AFF00] bg-clip-text text-transparent"
         >
           <FaMailBulk size="30px" className="text-[#1AFF00]" />
           Say Hi
