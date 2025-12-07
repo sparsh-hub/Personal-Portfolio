@@ -28,8 +28,8 @@ const Navbar = () => {
             <a href="#experience" className="hover:text-[#1AFF00]">
               Experience
             </a>
-            <a href="#projects" className="hover:text-[#1AFF00]">
-              projects
+            <a href="#gallery" className="hover:text-[#1AFF00]">
+              Gallery
             </a>
           </ul>
           <ul className="flex flex-row text-[#D3D3D3] p-3 m-2 gap-8 ">

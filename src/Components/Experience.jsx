@@ -36,7 +36,7 @@ const Experience = () => {
 
   return (
     <section id="experience" ref={container}>
-      <div className="cards-wrapper  p-16 border-b border-white/25 overflow-hidden">
+      <div className="cards-wrapper  p-16 overflow-hidden">
         <div>
           <p className="experience font-bold font-mono text-5xl text-[#D3D3D3] mt-30 ml-20">
             {"</> "}Experience{" "}
@@ -47,7 +47,7 @@ const Experience = () => {
           return (
             <div
               key={index}
-              className="card p-6 border-b border-white/25 overflow-hidden"
+              className="card p-6  overflow-hidden"
             >
               <div className="flex gap-4 items-center ml-10 h-32">
                 <h1 className="text-xl -translate-y-4 opacity-80 font-mono font-bold text-[#D3D3D3]">

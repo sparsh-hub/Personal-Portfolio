@@ -48,9 +48,10 @@ const About = () => {
               <span className="text-[#1AFF00] font-extrabold text-xl">
                 12 hours
               </span>{" "}
-              daily to academics while managing debating and fitness, reflecting
-              the goal-oriented approach seen in my successful 15 kg weight loss
-              achievement
+              daily to academics while managing extracurriculars like daily fitness or debating or the multiple interests i have. One thing I do wanna say is creating these many interests made me learn about how important discipline is in life to grow and hence i try to be as disciplined as possible.
+              <br />
+              Quoting Marcus Aurelius
+              <i></i>
             </p>
             <div className="flex flex-row gap-15">
               <ul className="mt-10 ml-5">

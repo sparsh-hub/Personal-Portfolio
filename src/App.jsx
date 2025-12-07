@@ -5,6 +5,7 @@ import {ScrollTrigger, SplitText, ScrollSmoother} from 'gsap/all'
 import Hero from './Components/Hero'
 import About from './Components/About'
 import Experience from './Components/Experience'
+import Footer from './Components/Footer'
 import { useGSAP } from '@gsap/react'
 import {motion} from 'motion/react'
 
@@ -23,6 +24,7 @@ const App = () => {
       <About />
       <Experience />
       <PhotoGallery />
+      <Footer />
     </main>
   )
 }

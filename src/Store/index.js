@@ -50,6 +50,14 @@ const gallery = [
     id: 4,
     link: '/myPic.jpg'
   },
+  {
+    id: 4,
+    link: '/motivation1.jpg'
+  },
+  {
+    id: 4,
+    link: '/motivation2.jpg'
+  },
   
 ]
 
