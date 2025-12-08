@@ -2,6 +2,7 @@ import React, { Suspense, useRef } from 'react'
 import gsap from 'gsap'
 import {ScrollTrigger, SplitText, ScrollSmoother} from 'gsap/all'
 import { useGSAP } from '@gsap/react'
+import Loader from './Components/Loader'
 
 
 const Navbar = React.lazy(() => import('./Components/Navbar'))
@@ -20,7 +21,7 @@ const App = () => {
   
   return (
     <main className='min-h-screen bg-[#023020] m-0 p-0'>
-      <Suspense fallback={<div className="text-white text-center mt-20">Loading...</div>}>
+      <Suspense fallback={<div><Loader /></div>}>
         <Navbar />
         <Hero />
         <About />
