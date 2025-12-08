@@ -1,15 +1,16 @@
-import React, { useRef } from 'react'
-import Navbar from './Components/Navbar'
+import React, { Suspense, useRef } from 'react'
 import gsap from 'gsap'
 import {ScrollTrigger, SplitText, ScrollSmoother} from 'gsap/all'
-import Hero from './Components/Hero'
-import About from './Components/About'
-import Experience from './Components/Experience'
-import Footer from './Components/Footer'
 import { useGSAP } from '@gsap/react'
-import {motion} from 'motion/react'
 
-import PhotoGallery from './Components/PhotoGallery'
+
+const Navbar = React.lazy(() => import('./Components/Navbar'))
+const Hero = React.lazy(() => import('./Components/Hero'))
+const About = React.lazy(() => import('./Components/About'))
+const Experience = React.lazy(() => import('./Components/Experience'))
+const PhotoGallery = React.lazy(() => import('./Components/PhotoGallery'))
+const Footer = React.lazy(() => import('./Components/Footer'))
+
 
 gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
@@ -19,12 +20,14 @@ const App = () => {
   
   return (
     <main className='min-h-screen bg-[#023020] m-0 p-0'>
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <PhotoGallery />
-      <Footer />
+      <Suspense fallback={<div className="text-white text-center mt-20">Loading...</div>}>
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <PhotoGallery />
+        <Footer />
+      </Suspense>
     </main>
   )
 }
