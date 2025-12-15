@@ -30,7 +30,7 @@ const Experience = () => {
 
       tl.to(".card", {
         height: 130,
-        stagger: 2,
+        stagger: 0.5,
         ease: "linear",
       });
     },
