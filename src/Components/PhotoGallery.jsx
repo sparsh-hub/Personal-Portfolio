@@ -81,10 +81,6 @@ const PhotoGallery = () => {
 export default PhotoGallery;
 
 
-// {gallery.map((card,index) => {
-//         return(
-//         <div key={index} className='' >
-//           <img className='w-60 mt-20 ml-20 border-0 rounded-3xl h-60' src={card.link} alt="" />
-//         </div>
-//         )
-//       })}
+
+
+
