@@ -23,7 +23,7 @@ const Navbar = () => {
     <header>
       <nav className="nav flex flex-col md:flex-row justify-center md:justify-around bg-[#023020] top-0 fixed w-full z-100 py-2 md:py-0">
         <div className="flex flex-col flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-8 font-mono text-sm sm:text-base text-[#D3D3D3] p-2 md:p-3 md:m-2 font-bold">
-        <img src="/sign.gif" alt="Sign" className="animate-pulse" />
+        <img src="/sign.gif" alt="Sign" className="animate-pulse h-15"  />
       </div>
         <ul className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-8 font-digital text-sm sm:text-base text-[#D3D3D3] p-2 md:p-3 md:m-2 font-bold">
           <Link
