@@ -1,80 +1,363 @@
-import React, { useRef } from "react";
-import { experienceData } from "../Store";
+// import { Icon } from "@iconify/react/dist/iconify.js";
+// import { projects } from "../Store/index.js";
+// import { useRef, useState } from "react";
+// import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
+// import ScrollTrigger from "gsap/all";
+// gsap.registerPlugin(ScrollTrigger);
+
+// const Experience = () => {
+//   const overlayRefs = useRef([]);
+//   const previewRef = useRef(null);
+
+
+//   const [currentIndex, setCurrentIndex] = useState(null);
+
+//   const mouse = useRef({ x: 0, y: 0 });
+//   const moveX = useRef(null);
+//   const moveY = useRef(null);
+
+//   useGSAP(() => {
+//     moveX.current = gsap.quickTo(previewRef.current, "x", {
+//       duration: 1.5,
+//       ease: "power3.out",
+//     });
+//     moveY.current = gsap.quickTo(previewRef.current, "y", {
+//       duration: 2,
+//       ease: "power3.out",
+//     });
+
+//     gsap.from("#project", {
+//       y: 100,
+//       opacity: 0,
+//       delay: 0.5,
+//       duration: 1,
+//       stagger: 0.3,
+//       ease: "back.out",
+//       scrollTrigger: {
+//         trigger: "#project",
+//         start: "top 20%",
+//         end: "bottom bottom",
+//         scrub: true,
+//         markers: true,
+//       },
+//     });
+//   }, []);
+
+//   const handleMouseEnter = (index) => {
+//     if (window.innerWidth < 768) return;
+//     setCurrentIndex(index);
+
+//     const el = overlayRefs.current[index];
+//     if (!el) return;
+
+//     gsap.killTweensOf(el);
+//     gsap.fromTo(
+//       el,
+//       {
+//         clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+//       },
+//       {
+//         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+//         duration: 0.15,
+//         ease: "power2.out",
+//       }
+//     );
+
+//     gsap.to(previewRef.current, {
+//       opacity: 1,
+//       scale: 1,
+//       duration: 0.3,
+//       ease: "power2.out",
+//     });
+//   };
+
+//   const handleMouseLeave = (index) => {
+//     if (window.innerWidth < 768) return;
+//     setCurrentIndex(null);
+
+//     const el = overlayRefs.current[index];
+//     if (!el) return;
+
+//     gsap.killTweensOf(el);
+//     gsap.to(el, {
+//       clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+//       duration: 0.2,
+//       ease: "power2.in",
+//     });
+
+//     gsap.to(previewRef.current, {
+//       opacity: 0,
+//       scale: 0.95,
+//       duration: 0.3,
+//       ease: "power2.out",
+//     });
+//   };
+
+//   const handleMouseMove = (e) => {
+//     if (window.innerWidth < 768) return;
+//     mouse.current.x = e.clientX + 24;
+//     mouse.current.y = e.clientY + 24;
+//     moveX.current(mouse.current.x);
+//     moveY.current(mouse.current.y);
+//   };
+
+//   return (
+//     <section id="project" className="bg-transparent absolute flex flex-col items-center justify-around w-full min-h-screen ">
+//       <div
+//         className="relative flex flex-col font-light"
+//         onMouseMove={handleMouseMove}
+//       >
+//         {projects.map((project, index) => (
+//           <div
+//             key={project.id}
+//             className="relative flex flex-col gap-10 py-5 cursor-pointer group md:gap-0"
+//             onMouseEnter={() => handleMouseEnter(index)}
+//             onMouseLeave={() => handleMouseLeave(index)}
+//           >
+//             {/* overlay */}
+//             <div
+//               ref={(el) => {
+//                 overlayRefs.current[index] = el;
+//               }}
+//               className="absolute inset-0 hidden md:block bg-black duration-20 -z-10 clip-path"
+//             />
+
+//             {/* title */}
+//             <div className="flex font-digital items-center justify-center px-10 text-white/50 transition-all duration-500  md:group-hover:text-white">
+//               <h2 className="lg:text-[32px] text-[26px] leading-none">
+//                 {project.name}
+//               </h2>
+//               <Icon icon="lucide:arrow-up-right" className="md:size-6 size-5" />
+//             </div>
+//             {/* divider */}
+//             <div className="w-100 h-0.5 pl-[100px] bg-white/80" />
+//             {/* framework */}
+//             <div className=" flex items-center justify-center px-10 text-xs leading-loose uppercase transtion-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12">
+//               {project.frameworks.map((framework) => (
+//                 <p
+//                   key={framework.id}
+//                   className="text-white/50 transition-colors duration-500 md:group-hover:text-white"
+//                 >
+//                   {framework.name}
+//                 </p>
+//               ))}
+//             </div>
+//             {/* mobile preview image */}
+//             <div className="relative flex items-center justify-center px-10 md:hidden h-[400px]">
+//               <img
+//                 src={project.bgImage}
+//                 alt={`${project.name}-bg-image`}
+//                 className="object-cover w-full h-full rounded-md brightness-50"
+//               />
+//               <img
+//                 src={project.image}
+//                 alt={`${project.name}-image`}
+//                 className="absolute bg-center px-14 rounded-xl"
+//               />
+//             </div>
+//           </div>
+//         ))}
+//         {/* desktop Flaoting preview image */}
+//         <div
+//           ref={previewRef}
+//           className="fixed -top-2/6 left-0 z-50 overflow-hidden border-8 border-black pointer-events-none w-[840px] md:block hidden opacity-0"
+//         >
+//           {currentIndex !== null && (
+//             <img
+//               src={projects[currentIndex].image}
+//               alt="preview"
+//               className="object-cover w-full h-full"
+//             />
+//           )}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Experience;
+
+
+
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { projects } from "../Store/index.js";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger, SplitText } from "gsap/all";
-import PhotoGallery from "./PhotoGallery";
-
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText);
 
 const Experience = () => {
-  const container = useRef();
+  const overlayRefs = useRef([]);
+  const previewRef = useRef(null);
 
-  useGSAP(
-    () => {
-      const cards = gsap.utils.toArray(".card");
+  const [currentIndex, setCurrentIndex] = useState(null);
+  const text = `Featured projects that have been meticulously
+    crafted with passion to drive
+    results and impact.`;
 
+  const mouse = useRef({ x: 0, y: 0 });
+  const moveX = useRef(null);
+  const moveY = useRef(null);
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".cards-wrapper",
-          start: "top top",
-          end: "+=1500",
-          pin: true,
-          scrub: 1,
-          pinSpacing:false,
-        },
-      });
+  useGSAP(() => {
+    moveX.current = gsap.quickTo(previewRef.current, "x", {
+      duration: 1.5,
+      ease: "power3.out",
+    });
+    moveY.current = gsap.quickTo(previewRef.current, "y", {
+      duration: 2,
+      ease: "power3.out",
+    });
 
-      tl.to(".card", {
-        height: 130,
-        stagger: 0.5,
-        ease: "linear",
-      });
-    },
-    { scope: container }
-  );
+    gsap.from("#project", {
+      y: 100,
+      opacity: 0,
+      delay: 0.5,
+      duration: 1,
+      stagger: 0.3,
+      ease: "back.out",
+      scrollTrigger: {
+        trigger: "#project",
+      },
+    });
+  }, []);
+
+  const handleMouseEnter = (index) => {
+    if (window.innerWidth < 768) return;
+    setCurrentIndex(index);
+
+    const el = overlayRefs.current[index];
+    if (!el) return;
+
+    gsap.killTweensOf(el);
+    gsap.fromTo(
+      el,
+      {
+        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+      },
+      {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+        duration: 0.15,
+        ease: "power2.out",
+      }
+    );
+
+    gsap.to(previewRef.current, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  };
+
+  const handleMouseLeave = (index) => {
+    if (window.innerWidth < 768) return;
+    setCurrentIndex(null);
+
+    const el = overlayRefs.current[index];
+    if (!el) return;
+
+    gsap.killTweensOf(el);
+    gsap.to(el, {
+      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+      duration: 0.2,
+      ease: "power2.in",
+    });
+
+    gsap.to(previewRef.current, {
+      opacity: 0,
+      scale: 0.95,
+      duration: 0.3,
+      ease: "power2.out",
+    });
+  };
+
+  const handleMouseMove = (e) => {
+    if (window.innerWidth < 768) return;
+    mouse.current.x = e.clientX + 24;
+    mouse.current.y = e.clientY + 24;
+    moveX.current(mouse.current.x);
+    moveY.current(mouse.current.y);
+  };
 
   return (
-    <section id="projects" ref={container}>
-      <div className="cards-wrapper p-16 overflow-hidden">
+    <section id="work" className="flex flex-col min-h-screen items-center justify-between">
+      <div className="cards-wrapper p-16 mt-15 mb-15 overflow-hidden">
         <div>
           <p className="experience font-bold font-mono text-5xl text-[#D3D3D3] mt-30 ml-20">
             {"</> "}Projects{" "}
             <span className="inline-block w-100 bg-[#F2F0EF] mb-3 opacity-35 h-0.5 ml-4"></span>
           </p>
         </div>
-        {experienceData.map((card, index) => {
-          return (
+        </div>
+      <div
+        className="relative flex flex-col font-light"
+        onMouseMove={handleMouseMove}
+      >
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            id="project"
+            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
+          >
+            {/* overlay */}
             <div
-              key={index}
-              className="card p-6 overflow-hidden"
-            >
-              <div className="flex gap-4 items-center ml-10 h-30">
-                <h1 className="text-xl -translate-y-4 opacity-80 font-mono font-bold text-[#D3D3D3]">
-                  {card.id}
-                </h1>
-                <h1 className="text-3xl opacity-80 font-mono font-bold text-[#1AFF00]">
-                  {card.title}
-                </h1>
-              </div>
+              ref={(el) => {
+                overlayRefs.current[index] = el;
+              }}
+              className="absolute font-digital inset-0 hidden md:block duration-200 -z-10 clip-path"
+            />
 
-              <ul className="text-[#D3D3D3] mb-10">
-                {card.items.map((content, idx) => (
-                  <li
-                    className="list-disc marker:text-[#1AFF00] ml-15 mb-2  text-[#D3D3D3] font-bold font-mono text-lg"
-                    key={idx}
-                  >
-                    {content}
-                  </li>
-                ))}
-              </ul>
+            {/* title */}
+            <div className="flex justify-between px-10 text-white/50 transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
+              <h2 className="lg:text-[32px] text-[26px] leading-none">
+                {project.name}
+              </h2>
+              <Icon icon="lucide:arrow-up-right" className="md:size-6 size-5" />
             </div>
-          );
-        })}
-        
+            {/* divider */}
+            <div className="w-full h-0.5 bg-green/80" />
+            {/* framework */}
+            <div className="flex px-10 text-xs leading-loose uppercase transtion-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12">
+              {project.frameworks.map((framework) => (
+                <p
+                  key={framework.id}
+                  className="text-white/50 font-digital transition-colors duration-500 md:group-hover:text-white"
+                >
+                  {framework.name}
+                </p>
+              ))}
+            </div>
+            {/* mobile preview image */}
+            <div className="relative flex items-center justify-center px-10 md:hidden h-[400px]">
+              <img
+                src={project.bgImage}
+                alt={`${project.name}-bg-image`}
+                className="object-cover w-full h-full rounded-md brightness-50"
+              />
+              <img
+                src={project.image}
+                alt={`${project.name}-image`}
+                className="absolute bg-center px-14 rounded-xl"
+              />
+            </div>
+          </div>
+        ))}
+        {/* desktop Flaoting preview image */}
+        <div
+          ref={previewRef}
+          className="fixed -top-2/6 left-0 z-50 overflow-hidden border-8 border-black pointer-events-none w-[960px] md:block hidden opacity-0"
+        >
+          {currentIndex !== null && (
+            <img
+              src={projects[currentIndex].image}
+              alt="preview"
+              className="object-cover w-full h-full"
+            />
+          )}
+        </div>
       </div>
     </section>
   );

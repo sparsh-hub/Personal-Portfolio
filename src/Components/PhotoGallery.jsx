@@ -44,7 +44,7 @@ const PhotoGallery = () => {
       scrollTrigger:{
         trigger: containerRef.current,
         start: "top top",
-        end: "+=1500",
+        end: "+=1000",
         scrub:2,
         pin:true,
         anticipatePin:1,
@@ -64,11 +64,11 @@ const PhotoGallery = () => {
 
   },{scope : containerRef})
   return (
-    <section id="gallery"  className="container flex justify-center items-center h-screen overflow-hidden" ref={containerRef}>
+    <section id="gallery"  className="container flex justify-center items-center h-screen overflow-hidden -translate-y-100" ref={containerRef}>
       <div className="center-point relative w-[250px] aspect-square">
         {gallery.map((card, index) => {
           return (
-            <div key={index} className="image-wrapper absolute w-[300px] aspect-square rounded-lg p-4 bg-[#fafafa] shadow-2xl invisible" ref={(el) => (imageRef.current[index] = el)}>
+            <div key={index} className="image-wrapper absolute w-[300px] aspect-square rounded-lg p-4 bg-[#fafafa] -translate-y-30 shadow-2xl invisible" ref={(el) => (imageRef.current[index] = el)}>
               <img className="w-full h-full object-cover " src={card.link} alt="" />
             </div>
           );
