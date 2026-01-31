@@ -31,7 +31,7 @@ const Navbar = () => {
             smooth
             offset={0}
             duration={1000}
-            className="aboutLink hover:bg-[#1AFF00]/45 hover:p-2 md:hover:p-3 rounded-2xl whitespace-nowrap"
+            className="aboutLink hover:text-xl hover:text-[#1AFF00]"
           >
             Home
           </Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
             smooth
             offset={0}
             duration={1000}
-            className="hover:bg-[#1AFF00]/45 hover:p-2 md:hover:p-3 rounded-2xl scroll-smooth whitespace-nowrap"
+            className="hover:text-xl hover:text-[#1AFF00]"
           >
             About
           </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
             smooth
             offset={0}
             duration={1000}
-            className="hover:bg-[#1AFF00]/45 hover:p-2 md:hover:p-3 rounded-2xl whitespace-nowrap"
+            className="hover:text-xl hover:text-[#1AFF00]"
           >
             Projects
           </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
             smooth
             offset={0}
             duration={1000}
-            className="hover:text-[#1AFF00] whitespace-nowrap"
+            className="hover:text-xl hover:text-[#1AFF00]"
           >
             PhotoGallery
           </Link>

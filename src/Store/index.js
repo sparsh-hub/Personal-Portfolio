@@ -67,9 +67,9 @@ export const projects = [
     name: "Resume Builder",
     description:
       "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
-    href: "",
     image: "/projects/resume.png",
     bgImage: "/backgrounds/blanket.jpg",
+    url : "https://resume-builder-fresh.vercel.app/",
     frameworks: [
       { id: 1, name: "React" },
       { id: 2, name: "Express.js" },
@@ -84,46 +84,42 @@ export const projects = [
     name: "Book Recommender",
     description:
       "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
-    href: "",
-    image: "projects/plant-shop.jpg",
+    image: "projects/book.png",
     bgImage: "/backgrounds/curtains.jpg",
+    url : "https://github.com/sparsh-hub/gradio-book-recommender",
     frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Next.js" },
-      { id: 3, name: "Stripe API" },
-      { id: 4, name: "Tailwind CSS" },
+      { id: 1, name: "Python" },
+      { id: 2, name: "Matplotlib" },
+      { id: 3, name: "Gradio" },
+      { id: 4, name: "Pandas" },
     ],
   },
   {
     id: 3,
-    name: "Real Time Chat App",
+    name: "DogStudio Clone",
     description:
       "An e-commerce platform for Apple products and accessories with deals and category filtering.",
-    href: "",
-    image: "projects/apple-tech-store.jpg",
+    image: "projects/dogstudio.png",
     bgImage: "/backgrounds/map.jpg",
+    url : "https://github.com/sparsh-hub/dogStudio",
     frameworks: [
-      { id: 1, name: "MongoDB" },
-      { id: 2, name: "Express" },
-      { id: 3, name: "NodeJS" },
-      { id: 4, name: "React" },
-      { id: 5, name: "Socket.IO" },
-      { id: 5, name: "TailwindCSS" },
+      { id: 1, name: "React.js" },
+      { id: 2, name: "Three.js" },
+      { id: 3, name: "GSAP" },
+      { id: 4, name: "TailwindCSS" },
     ],
   },
   {
     id: 4,
-    name: "E-Commerce Electronics Store",
+    name: "N8N workflow",
     description:
       "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
-    href: "",
-    image: "projects/electronics-store.jpg",
+    image: "projects/n8n.png",
     bgImage: "/backgrounds/poster.jpg",
+    url : "https://n8n.io/",
     frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Laravel" },
-      { id: 3, name: "MySQL" },
-      { id: 4, name: "SCSS" },
+      { id: 1, name: "N8N" },
+      { id: 2, name: "javascript" },
     ],
   },
   {
@@ -131,28 +127,17 @@ export const projects = [
     name: "Discord Server",
     description:
       "A curated collection of designer home decor items, including furniture and artisan vases.",
-    href: "",
     image: "projects/discord.png",
     bgImage: "/backgrounds/table.jpg",
+    url : "https://discord.com/",
     frameworks: [
       { id: 1, name: "Discord" },
-    ],
-  },
-  {
-    id: 6,
-    name: "Digital Game Store",
-    description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
-    href: "",
-    image: "projects/game-store.jpg",
-    bgImage: "/backgrounds/curtains.jpg",
-    frameworks: [
-      { id: 1, name: "Svelte" },
-      { id: 2, name: "Node.js" },
-      { id: 3, name: "MongoDB" },
-      { id: 4, name: "Chakra UI" },
     ],
   },
 ];
 
   export  { experienceData, gallery } 
+
+
+
+

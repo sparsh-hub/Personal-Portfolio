@@ -4,6 +4,7 @@ import { ScrollTrigger, SplitText, ScrollSmoother } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import Loader from "./Components/Loader";
 import ReactLenis from "lenis/react";
+import SoundButton from "./Components/SoundButton";
 
 const Navbar = React.lazy(() => import("./Components/Navbar"));
 const Hero = React.lazy(() => import("./Components/Hero"));
@@ -18,7 +19,7 @@ gsap.registerPlugin(SplitText);
 
 const App = () => {
   return (
-    <main className="min-h-screen bg-[#023020] m-0 p-0">
+    <main className="min-h-screen bg-[#023020] m-0 p-0 z-2">
       <Suspense
         fallback={
           <div>
@@ -26,9 +27,10 @@ const App = () => {
           </div>
         }
       >
-        <ReactLenis root>
+        <ReactLenis root> 
           <Navbar />
           <Hero />
+          <SoundButton />
           <About />
           <Experience />
           <PhotoGallery />

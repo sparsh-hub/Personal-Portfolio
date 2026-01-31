@@ -45,10 +45,9 @@ const About = () => {
               <span className="text-[#1AFF00] font-extrabold text-xl">
                 12 hour
               </span>{" "}
-              daily grind of study, fitness, and other extracurriculars. I’ve found that high discipline is the only way to turn 'having many interests' into 'having many skills.
+              daily grind of study, fitness, and other extracurriculars. I’ve found that high discipline is the only way to turn <br /> 'having many interests' into 'having many skills.
               <br />
-              <i>'The art of living is more like wrestling than dancing.'</i> — Marcus Aurelius (I take the wrestling part literally).
-              <i></i>
+              <i>'The art of living is more like wrestling than dancing.'</i> — Marcus Aurelius <br />(I take the wrestling part literally).
             </p>
             <div className="flex flex-row gap-15">
               <ul className="mt-10 ml-5">
@@ -59,12 +58,24 @@ const About = () => {
                 <li className="list-disc marker:text-[#1AFF00] mb-2">
                   JavaScript
                 </li>
+                <li className="list-disc marker:text-[#1AFF00] mb-2">
+                  Three.js
+                </li>
               </ul>
               <ul className="mt-10 ml-5">
                 <li className="list-disc marker:text-[#1AFF00] mb-2">AWS</li>
                 <li className="list-disc marker:text-[#1AFF00] mb-2">SQL</li>
+                <li className="list-disc marker:text-[#1AFF00] mb-2">GSAP</li>
                 <li className="list-disc marker:text-[#1AFF00] mb-2">
                   Git/Github
+                </li>
+              </ul>
+              <ul className="mt-10 ml-5">
+                <li className="list-disc marker:text-[#1AFF00] mb-2">N8N</li>
+                <li className="list-disc marker:text-[#1AFF00] mb-2">Python</li>
+                <li className="list-disc marker:text-[#1AFF00] mb-2">Next.js</li>
+                <li className="list-disc marker:text-[#1AFF00] mb-2">
+                  MongoDB
                 </li>
               </ul>
             </div>
@@ -76,7 +87,7 @@ const About = () => {
           </div>
           <div className="mr-30 ">
             <img
-              src='/myPic.jpg'
+              src='/image.png'
               className="w-100 mt-30 h-100 border-0 rounded-[30px] hover:-translate-y-3 "
             />
             
