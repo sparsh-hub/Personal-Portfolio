@@ -133,10 +133,10 @@ const Footer = () => {
     <section
       id="footer"
       ref={container}
-      className="text-[#D3D3D3] py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8"
+      className="text-[#D3D3D3] py-12 sm:py-16 mt-10 md:py-20 px-4 sm:px-6 lg:px-8"
     >
       <div className="footer max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-30">
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 sm:gap-12 md:gap-16 lg:gap-50 xl:gap-60">
           {/* Thank You Message */}
           <div className="text-center lg:text-left">
             <h1 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl">
