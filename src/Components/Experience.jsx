@@ -10,7 +10,6 @@ const Experience = () => {
 
   const [currentIndex, setCurrentIndex] = useState(null);
 
-
   const mouse = useRef({ x: 0, y: 0 });
   const moveX = useRef(null);
   const moveY = useRef(null);
@@ -101,11 +100,19 @@ const Experience = () => {
       id="work"
       className="flex flex-col min-h-screen items-center justify-between"
     >
-      <div className="cards-wrapper p-16 mt-15 mb-15 overflow-hidden">
+      {/* <div className="cards-wrapper p-16 mt-15 mb-15 overflow-hidden">
         <div>
           <p className="experience font-bold font-mono text-5xl text-[#D3D3D3] mt-30 ml-20">
             {"</> "}Projects{" "}
             <span className="inline-block w-100 bg-[#F2F0EF] mb-3 opacity-35 h-0.5 ml-4"></span>
+          </p>
+        </div>
+      </div> */}
+      <div className="cards-wrapper p-4 sm:p-8 md:p-12 lg:p-16 mt-8 sm:mt-10 md:mt-12 lg:mt-15 mb-8 sm:mb-10 md:mb-12 lg:mb-15 overflow-hidden">
+        <div>
+          <p className="experience font-bold font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#D3D3D3] mt-6 sm:mt-8 md:mt-12 lg:mt-30 ml-4 sm:ml-8 md:ml-12 lg:ml-20">
+            {"</> "}Projects{" "}
+            <span className="inline-block w-16 sm:w-24 md:w-32 lg:w-100 bg-[#F2F0EF] mb-2 sm:mb-2.5 md:mb-3 opacity-35 h-0.5 ml-2 sm:ml-3 md:ml-4"></span>
           </p>
         </div>
       </div>
@@ -177,5 +184,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
-
